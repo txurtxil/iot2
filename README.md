@@ -1,3 +1,7 @@
+Modificaciones realizadas en base al trabajo de Yoheee
+
+https://github.com/0xYoshee/iot2
+
 # IoT 2, Oled SD1306 + MqTT + DHT22 + Switches ...
 
 ## Instalar dependencias:
