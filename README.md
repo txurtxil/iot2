@@ -13,12 +13,11 @@ apt-get install libopencv-dev python-opencv
 cd /usr/include/opencv
 
 ln -s imgproc/imgproc.hpp imgproc.hpp
+## Compilar iot2
 
-## Compilar iot2:
+git clone https://github.com/b0bh00d/QtDropbox2
 
-git clone https://github.com/txurtxil/iot2
-
-cd iot2/lib/QtDropbox2/
+cd QtDropbox2
 
 qmake
 
@@ -26,7 +25,8 @@ make
 
 cp libQtDropbox2.so* /usr/lib/
 
-cd ../../
+git clone https://github.com/txurtxil/iot2
+
 
 qmake
 
