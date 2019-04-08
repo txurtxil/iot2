@@ -8,6 +8,10 @@ https://github.com/0xYoshee/iot2
 
 apt-get install libopencv-dev python-opencv
 
+apt-get install libqt5serialport5
+
+apt-get install libqt5serialport5-dev
+
 ## Corregir path opencv:
 
 cd /usr/include/opencv
