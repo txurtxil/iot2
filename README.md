@@ -12,13 +12,6 @@ apt-get install libqt5serialport5
 
 apt-get install libqt5serialport5-dev
 
-## Corregir path opencv:
-
-cd /usr/include/opencv
-
-ln -s imgproc/imgproc.hpp imgproc.hpp
-## Compilar iot2
-
 git clone https://github.com/b0bh00d/QtDropbox2
 
 cd QtDropbox2
@@ -29,8 +22,14 @@ make
 
 cp libQtDropbox2.so* /usr/lib/
 
-git clone https://github.com/txurtxil/iot2
+## Corregir path opencv:
 
+cd /usr/include/opencv
+
+ln -s imgproc/imgproc.hpp imgproc.hpp
+## Compilar iot2
+
+git clone https://github.com/txurtxil/iot2
 
 qmake
 
