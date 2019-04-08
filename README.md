@@ -10,7 +10,7 @@ cd /usr/include/opencv
 
 ln -d imgproc/imgproc.hpp imgproc.hpp
 
-## Compliar iot2:
+## Compilar iot2:
 
 git clone https://github.com/txurtxil/iot2
 
