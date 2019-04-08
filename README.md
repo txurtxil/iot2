@@ -24,7 +24,7 @@ cp libQtDropbox2.so* /usr/lib/
 
 ## Corregir path opencv:
 
-cd /usr/include/opencv
+cd /usr/include/opencv2
 
 ln -s imgproc/imgproc.hpp imgproc.hpp
 ## Compilar iot2
