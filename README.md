@@ -12,7 +12,7 @@ apt-get install libopencv-dev python-opencv
 
 cd /usr/include/opencv
 
-ln -d imgproc/imgproc.hpp imgproc.hpp
+ln -s imgproc/imgproc.hpp imgproc.hpp
 
 ## Compilar iot2:
 
