@@ -7,6 +7,7 @@ apt-get install libopencv-dev python-opencv
 ## Corregir path opencv:
 
 cd /usr/include/opencv
+
 ln -d imgproc/imgproc.hpp imgproc.hpp
 
 ## Compliar iot2:
