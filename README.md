@@ -16,26 +16,27 @@ https://github.com/0xYoshee/iot2
           apt-get install qt4-demos qt4-doc qt4-doc-html qt5-doc qt5-doc-html
           apt-get install libqt5serialport5
           apt-get install libqt5serialport5-dev
-###      1.3 Paquetes Opencv:
+###      1.3 Paquetes Opencv y corregir path opencv::
           apt-get install libopencv-dev python-opencv
-###      1.3 Compilar e instalar QtDropbox2
-         git clone https://github.com/b0bh00d/QtDropbox2
-         cd QtDropbox2
-         qmake
-         make
-         cp libQtDropbox2.so* /usr/lib/
-## 2. Corregir path opencv:
           cd /usr/include/opencv2
           ln -s imgproc/imgproc.hpp imgproc.hpp
+###      1.4 Compilar e instalar QtDropbox2
+         git clone https://github.com/b0bh00d/QtDropbox2
+         cd QtDropbox2
+         qmake && make
+         cp libQtDropbox2.so* /usr/lib/
+###      1.5 Compilar librerias qmq
+         git clone https://github.com/emqtt/qmqtt
+         cd qmqtt
+         qmake && make
+         make install        
 
 ## 3. Compilar iot2
 
           git clone https://github.com/txurtxil/iot2
-          qmake
-          make
+          qmake && make
           ./iot2
-
-
+ 
 # Trabajar con iot2:
 
 ## 1.1 Configuración aplicación iot2
@@ -82,6 +83,8 @@ https://github.com/0xYoshee/iot2
                   ......
                   #define PIN_DHT       1  // Pin fisico 12, wiring pi GIPio numero 1
                   .....
-        
+        Salida i2c de la pantalla Oled SD1306:
+        En raspberry existe /dev/i2c-1, si tenemos problemas con el bus i2c, 
+         editamos main.cpp
 
 
