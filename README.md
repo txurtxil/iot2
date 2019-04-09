@@ -68,9 +68,9 @@ https://github.com/0xYoshee/iot2
 
 
 
-## 2 Codigo iot2:
+# 2 Codigo fuente iot2:
 
-## 1. defines.h: Definimos los dispositivos que usaremos y sus PIN GPIO wiringpi que usaran(DHT22, Switches, etc..):
+### 1. defines.h: Definimos los dispositivos que usaremos y sus PIN GPIO wiringpi que usaran(DHT22, Switches, etc..):
                   ```javascrip
                   #define RELAY1 "relay1"
                   .....
