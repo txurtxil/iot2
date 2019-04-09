@@ -185,9 +185,8 @@ void Body::timeout()
     if(enableMQTT){
         mqtt->publish(QMQTT::Message(0, "tempState", QString("%1").arg(mBME280->cTemp()).toUtf8()));
         mqtt->publish(QMQTT::Message(0, "humiState", QString("%1").arg(mBME280->humidity()).toUtf8()));
-
-//        mqtt->publish(QMQTT::Message(0, "tempState", QString("%1").arg(mDhtt->dht()->getTemp()).toUtf8()));
-//        mqtt->publish(QMQTT::Message(0, "humiState", QString("%1").arg(mDhtt->dht()->getHum()).toUtf8()));
+        mqtt->publish(QMQTT::Message(0, "tempState", QString("%1").arg(mDhtt->dht()->getTemp()).toUtf8()));
+        mqtt->publish(QMQTT::Message(0, "humiState", QString("%1").arg(mDhtt->dht()->getHum()).toUtf8()));
     }
 
     if(enableDisplay){
@@ -247,13 +246,13 @@ void Body::timeout()
             ssd1306DrawString(68,  54, (int8_t*)QString("%1%").arg(mBME280->humidity(), 0,'f', 2).toLatin1().data(), 1, WHITE, LAYER0);
         }
 
-//        if(mDhtt->dht()->getTemp() !=0 && mDhtt->dht()->getHum()!=0){
-//            ssd1306DrawXBM( 2, 52, temper_width, temper_height, temper_bits, WHITE);
-//            ssd1306DrawString(14,  54, (int8_t*)QString("%1°C").arg(mDhtt->dht()->getTemp()).toLatin1().data(), 1, WHITE, LAYER0);
+        if(mDhtt->dht()->getTemp() !=0 && mDhtt->dht()->getHum()!=0){
+            ssd1306DrawXBM( 2, 52, temper_width, temper_height, temper_bits, WHITE);
+            ssd1306DrawString(14,  54, (int8_t*)QString("%1°C").arg(mDhtt->dht()->getTemp()).toLatin1().data(), 1, WHITE, LAYER0);
 
-//            ssd1306DrawXBM( 54, 52, humidity_width, humidity_height, humidity_bits, WHITE);
-//            ssd1306DrawString(68,  54, (int8_t*)QString("%1%").arg(mDhtt->dht()->getHum()).toLatin1().data(), 1, WHITE, LAYER0);
-//        }
+            ssd1306DrawXBM( 54, 52, humidity_width, humidity_height, humidity_bits, WHITE);
+            ssd1306DrawString(68,  54, (int8_t*)QString("%1%").arg(mDhtt->dht()->getHum()).toLatin1().data(), 1, WHITE, LAYER0);
+        }
 
         if(enableTelegram)
             ssd1306DrawString(15,  4, (int8_t*)QString("T").toLatin1().data(), 1, WHITE, LAYER0);
@@ -364,8 +363,7 @@ void Body::telegramReceived(Message m)
             telegram->sendMessage(m.chat.id, QString("t= %1 °C").arg(mBME280->cTemp()));
             telegram->sendMessage(m.chat.id, QString("h= %1 RH").arg(mBME280->humidity()));
             telegram->sendMessage(m.chat.id, QString("p= %1 mm Hg").arg(mBME280->pressure()/1.33322));
-
-//            telegram->sendMessage(m.chat.id, QString("%1°C %2%").arg(mDhtt->dht()->getTemp()).arg(mDhtt->dht()->getHum()));
+            telegram->sendMessage(m.chat.id, QString("%1°C %2%").arg(mDhtt->dht()->getTemp()).arg(mDhtt->dht()->getHum()));
         }       
         else if(m.string.toLower().contains("cam")){
             if(enableCamera) {

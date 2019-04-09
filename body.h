@@ -92,7 +92,7 @@ private:
     CameraThread *mCameraThread;
 
 //    Modem *mModem;
-//    DHTTheread *mDhtt;
+    DHTTheread *mDhtt;
     BME280 *mBME280;
 
     QMQTT::Client *mqtt;
