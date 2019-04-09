@@ -6,41 +6,30 @@ https://github.com/0xYoshee/iot2
 
 ## 1. Instalar dependencias:
 
-###  1.1 Compilar e instalar librerias wiringpi:
+###     1.1 Compilar e instalar librerias wiringpi:
+         http://wiringpi.com/download-and-install/
 
-http://wiringpi.com/download-and-install/
+###     1.2 Paquetes Qt:
 
-###  1.2 Paquetes Qt:
+          apt-get install libopencv-dev python-opencv
+          apt-get install libqt5serialport5
+          apt-get install libqt5serialport5-dev
 
-     apt-get install libopencv-dev python-opencv
-     apt-get install libqt5serialport5
-     apt-get install libqt5serialport5-dev
-
-###  1.3 Compilar e instalar QtDropbox2
-
-   git clone https://github.com/b0bh00d/QtDropbox2
-
-   cd QtDropbox2
-
-   qmake
-
-   make
-
-   cp libQtDropbox2.so* /usr/lib/
-
+###      1.3 Compilar e instalar QtDropbox2
+         git clone https://github.com/b0bh00d/QtDropbox2
+         cd QtDropbox2
+         qmake
+         make
+         cp libQtDropbox2.so* /usr/lib/
 ## 2. Corregir path opencv:
-
-   cd /usr/include/opencv2
-
-   ln -s imgproc/imgproc.hpp imgproc.hpp
+          cd /usr/include/opencv2
+          ln -s imgproc/imgproc.hpp imgproc.hpp
 
 ## 3. Compilar iot2
 
-   git clone https://github.com/txurtxil/iot2
-
-   qmake
-
-   make
+          git clone https://github.com/txurtxil/iot2
+          qmake
+          make
 
 
 
