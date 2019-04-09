@@ -27,7 +27,7 @@ Body::Body(QObject *parent) :
 
 //    mModem = new Modem("/dev/modem0");
 
-//    mDhtt = new DHTTheread(PIN_DHT);
+    mDhtt = new DHTTheread(PIN_DHT);
 
     mBME280 = new BME280(DEV_TEMP);
 

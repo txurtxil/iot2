@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     Display *display;
 
     if(isDisplay)
-        display = new Display("/dev/i2c-0");
+        display = new Display("/dev/i2c-1");
 
     usleep (3000*1000); // camera init time
 
