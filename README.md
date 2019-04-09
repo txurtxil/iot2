@@ -10,11 +10,14 @@ https://github.com/0xYoshee/iot2
          http://wiringpi.com/download-and-install/
 
 ###     1.2 Paquetes Qt:
-
-          apt-get install libopencv-dev python-opencv
+          apt-get install build-essential
+          apt-get install qtcreator
+          apt-get install qt5-default
+          apt-get install qt4-demos qt4-doc qt4-doc-html qt5-doc qt5-doc-html
           apt-get install libqt5serialport5
           apt-get install libqt5serialport5-dev
-
+###      1.3 Paquetes Opencv:
+          apt-get install libopencv-dev python-opencv
 ###      1.3 Compilar e instalar QtDropbox2
          git clone https://github.com/b0bh00d/QtDropbox2
          cd QtDropbox2
