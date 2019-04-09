@@ -35,7 +35,7 @@ https://github.com/0xYoshee/iot2
 
 # Trabajar con iot2:
 
-## 1 Configuración aplicación iot2
+## 1.1 Configuración aplicación iot2
     Editar fichero nuevo de configuración /etc/iot.conf:
     
          [telegram]
@@ -49,18 +49,15 @@ https://github.com/0xYoshee/iot2
          cid = iot-2g
          usuario = usuario
          pass = contraseña
-
-
-## 2 Codigo iot2:
-         ### Comandos de TELEGRAM:
-
+         
+## 1.2 Configuración comandos Telegram y MQtt:
+         ### Comandos de TELEGRAM
          cam       - foto de camara
          temp      - temperatura del sensor
          reboot    - reiniciar el hardware
          relayX=Y  - establezca el estado X para el relé X (0-apagado. 1-encendido. 2-invertido. desde el intervalo de                               conmutación de 30 minutos encendido-apagado-encendido ...)
          relayZ    - estado de retorno para el relé X
          relay=Y   -establezca el estado de todos los relés (0-apagado. 1-encendido. 2-invertido. desde el intervalo de                              conmutación de 30 minutos encendido-apagado-encendido ...)
-
 
          ### MQTT
 
@@ -69,3 +66,6 @@ https://github.com/0xYoshee/iot2
          tempState - temperatura
          HumiState - Humedad
 
+
+
+## 2 Codigo iot2:
