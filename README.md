@@ -30,8 +30,25 @@ https://github.com/0xYoshee/iot2
           git clone https://github.com/txurtxil/iot2
           qmake
           make
+          ./iot2
 
 
+# Trabajar con iot2:
+
+## 1 Configuración
+    Editar fichero nuevo de configuración /etc/iot.conf:
+    
+         [telegram]
+         enable = true
+         token = bot token
+
+         [mqtt]
+         enable = true
+         host = servidor por ejemplo m10.cloudmqtt.com
+         puerto = puerto, por ejemplo, 11420
+         cid = iot-2g
+         usuario = usuario
+         pass = contraseña
 
 
 
