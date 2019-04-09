@@ -70,13 +70,14 @@ https://github.com/0xYoshee/iot2
 
 # 2 Codigo fuente iot2:
 
- 1. defines.h: Definimos los dispositivos que usaremos y sus PIN GPIO wiringpi que usaran(DHT22, Switches, etc..):
+ ## 1.defines.h:
+          Definimos los dispositivos que usaremos y sus PIN GPIO wiringpi que usaran(DHT22, Switches, etc..):
               
                   #define RELAY1 "relay1"
                   .....
                   #define DEV_CAM1 "/dev/video1"
                   ......
-                  #define PIN_DHT       1
+                  #define PIN_DHT       1  // Pin fisico 12, wiring pi GIPio numero 1
                   .....
         
 
