@@ -55,9 +55,9 @@ https://github.com/0xYoshee/iot2
          cam       - foto de camara
          temp      - temperatura del sensor
          reboot    - reiniciar el hardware
-         relayX=Y  - establezca el estado X para el relé X (0-apagado. 1-encendido. 2-invertido. desde el intervalo de        conmutación de 30 minutos encendido-apagado-encendido ...)
+         relayX=Y  - establezca el estado X para el relé X (0-apagado. 1-encendido. 2-invertido. desde el intervalo deconmutación de 30 minutos encendido-apagado-encendido ...)        
          relayZ    - estado de retorno para el relé X
-         relay=Y   -establezca el estado de todos los relés (0-apagado. 1-encendido. 2-invertido. desde el intervalo de      conmutación de 30 minutos encendido-apagado-encendido ...)
+         relay=Y   -establezca el estado de todos los relés (0-apagado. 1-encendido. 2-invertido. desde el intervalo deconmutación de 30 minutos encendido-apagado-encendido ...)
 
          ### MQTT
 
