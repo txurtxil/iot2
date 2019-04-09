@@ -6,19 +6,17 @@ https://github.com/0xYoshee/iot2
 
 ## 1. Instalar dependencias:
 
-### Compilar e instalar librerias wiringpi:
+###  1.1 Compilar e instalar librerias wiringpi:
 
 http://wiringpi.com/download-and-install/
 
-### Paquetes Qt:
+###  1.2 Paquetes Qt:
 
-apt-get install libopencv-dev python-opencv
+     apt-get install libopencv-dev python-opencv
+     apt-get install libqt5serialport5
+     apt-get install libqt5serialport5-dev
 
-apt-get install libqt5serialport5
-
-apt-get install libqt5serialport5-dev
-
-### Compilar e instalar QtDropbox2
+###  1.3 Compilar e instalar QtDropbox2
 
    git clone https://github.com/b0bh00d/QtDropbox2
 
