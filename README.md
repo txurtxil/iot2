@@ -102,7 +102,7 @@ https://github.com/0xYoshee/iot2
             }
            QProcess::startDetached("reboot");
          }
-   ##    // Pruebas Telegram comandos Txurtxil
+      // Pruebas Telegram comandos Txurtxil
         else if(m.string.toLower() == "comando") {
             if(enableDisplay){
                 timer->stop();
@@ -113,7 +113,7 @@ https://github.com/0xYoshee/iot2
            // un comando que no hace mas que crear un fichero vacio en /opt/ok
            QProcess::startDetached("touch /opt/ok");
         }
-   ##      // Fin pruebas comandos Telegram Txurtxil
+         // Fin pruebas comandos Telegram Txurtxil
      .......................
  
 
