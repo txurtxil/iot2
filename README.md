@@ -74,7 +74,7 @@ https://github.com/0xYoshee/iot2
 
 # 2 Codigo fuente iot2:
 
- ## 1.defines.h:
+ ## 1.Definir dispositivos (hardware) defines.h:
           Definimos los dispositivos que usaremos y sus PIN GPIO wiringpi que usaran(DHT22, Switches, etc..):
               
                   #define RELAY1 "relay1"
@@ -86,5 +86,35 @@ https://github.com/0xYoshee/iot2
         Salida i2c de la pantalla Oled SD1306:
         En raspberry existe /dev/i2c-1, si tenemos problemas con el bus i2c, 
          editamos main.cpp
+
+## 2. Telegram bot  body.cpp:
+       Podemos definir comandos a ejecutar en nuestro bot (crear bot: https://planetachatbot.com/c%C3%B3mo-crear-un-bot-para-telegram-y-darle-funcionalidad-c5c7ec833f49 )
+          
+     
+       ..............
+        }
+        else if(m.string.toLower() == "reboot") {
+            if(enableDisplay){
+                timer->stop();
+                ssd1306ClearScreen(LAYER0 | LAYER1) ;
+                ssd1306DrawXBM(50, 15, start_width, start_height, start_bits, WHITE);
+                ssd1306Refresh();
+            }
+           QProcess::startDetached("reboot");
+         }
+   ##    // Pruebas Telegram comandos Txurtxil
+        else if(m.string.toLower() == "comando") {
+            if(enableDisplay){
+                timer->stop();
+                ssd1306ClearScreen(LAYER0 | LAYER1) ;
+                ssd1306DrawXBM(50, 15, start_width, start_height, start_bits, WHITE);
+                ssd1306Refresh();
+            }
+           // un comando que no hace mas que crear un fichero vacio en /opt/ok
+           QProcess::startDetached("touch /opt/ok");
+        }
+   ##      // Fin pruebas comandos Telegram Txurtxil
+     .......................
+ 
 
 
