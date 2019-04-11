@@ -88,8 +88,8 @@ https://github.com/0xYoshee/iot2
          editamos main.cpp
 
 ## 2. Telegram bot  body.cpp:
-       Podemos definir comandos a ejecutar en nuestro bot (crear bot: https://planetachatbot.com/c%C3%B3mo-crear-un-bot-para-telegram-y-darle-funcionalidad-c5c7ec833f49 )
-          
+       Podemos definir comandos a ejecutar en nuestro bot (crear bot: 
+       http://surfero.blogspot.com/2019/04/telegram-iot-crear-un-bot-telegram.html )
      
        ..............
        //este es el comando reboot, que rinicia el sistema operativo
