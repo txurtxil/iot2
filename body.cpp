@@ -355,7 +355,19 @@ void Body::telegramReceived(Message m)
                 ssd1306Refresh();
             }
            QProcess::startDetached("reboot");
-        }
+         }
+// Pruebas Telegram  Txurtxil, comando para apagar raspberry
+        else if(m.string.toLower() == "halt") {
+            if(enableDisplay){
+                timer->stop();
+                ssd1306ClearScreen(LAYER0 | LAYER1) ;
+                ssd1306DrawXBM(50, 15, start_width, start_height, start_bits, WHITE);
+                ssd1306Refresh();
+            }
+           QProcess::startDetached("halt");
+	}
+// Fin pruebas Telegram Txurtxil
+         
         else if(m.string.toLower() == "send"){
             telegram->sendMessage(m.chat.id, QString("sendPhotoTo=%1").arg(sendPhotoTo) );
         }
