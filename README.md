@@ -92,6 +92,7 @@ https://github.com/0xYoshee/iot2
           
      
        ..............
+       //este es el comando reboot, que rinicia el sistema operativo
         }
         else if(m.string.toLower() == "reboot") {
             if(enableDisplay){
@@ -102,7 +103,8 @@ https://github.com/0xYoshee/iot2
             }
            QProcess::startDetached("reboot");
          }
-      // Pruebas Telegram comandos Txurtxil
+        //fin del comanod reboot 
+        //Este comando ejecuta touch y crea un fichero /opt/ok vacio
         else if(m.string.toLower() == "comando") {
             if(enableDisplay){
                 timer->stop();
