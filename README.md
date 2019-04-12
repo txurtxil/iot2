@@ -4,7 +4,7 @@ https://github.com/0xYoshee/iot2
 
 ## IoT 2,Qt5+ Telegram+Oled SD1306 + MqTT + DHT22 + Switches ...
 
-![Iot Mqtt ](https://github.com/txurtxil/iot2/blob/master/iot2.jpg "Iot Mqtt")
+![Iot Mqtt ](https://github.com/txurtxil/iot2/blob/master/gpio2.jpg "Iot Mqtt")
 
 ## 1. Instalar dependencias:
 
