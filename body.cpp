@@ -356,7 +356,7 @@ void Body::telegramReceived(Message m)
             }
            QProcess::startDetached("reboot");
          }
-// Pruebas Telegram  Txurtxil, comando para apagar raspberry
+        // Pruebas Telegram  Txurtxil, comando para apagar raspberry
         else if(m.string.toLower() == "halt") {
             if(enableDisplay){
                 timer->stop();
@@ -366,21 +366,22 @@ void Body::telegramReceived(Message m)
             }
            QProcess::startDetached("halt");
 	}
-// Fin pruebas Telegram Txurtxil
-         
+       // Fin pruebas Telegram Txurtxil
         else if(m.string.toLower() == "send"){
             telegram->sendMessage(m.chat.id, QString("sendPhotoTo=%1").arg(sendPhotoTo) );
         }
         else if(m.string.toLower() == "temp") {
-            telegram->sendMessage(m.chat.id, QString("t= %1 °C").arg(mBME280->cTemp()));
-            telegram->sendMessage(m.chat.id, QString("h= %1 RH").arg(mBME280->humidity()));
-            telegram->sendMessage(m.chat.id, QString("p= %1 mm Hg").arg(mBME280->pressure()/1.33322));
+          //  Oculto  sensor BME280, queda guardado para cuando se use
+	  //  telegram->sendMessage(m.chat.id, QString("t= %1 °C").arg(mBME280->cTemp()));
+          //  telegram->sendMessage(m.chat.id, QString("h= %1 RH").arg(mBME280->humidity()));
+          //  telegram->sendMessage(m.chat.id, QString("p= %1 mm Hg").arg(mBME280->pressure()/1.33322));
+	  //  Mostramos en telegram sensor DHT22 Temperatura y humedad:
             telegram->sendMessage(m.chat.id, QString("%1°C %2%").arg(mDhtt->dht()->getTemp()).arg(mDhtt->dht()->getHum()));
-        }       
+        }
         else if(m.string.toLower().contains("cam")){
             if(enableCamera) {
                 QString lastImage = QString("/tmp/%1.png").arg("cam");
-                mCameraThread->image()->save(lastImage,"PNG");                
+                mCameraThread->image()->save(lastImage,"PNG");
                 QFile file(lastImage);
                 telegram->sendPhoto(m.chat.id, &file);
             }
