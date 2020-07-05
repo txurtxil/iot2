@@ -6,7 +6,7 @@ QT += printsupport
 CONFIG += c++11 console
 CONFIG -= app_bundle
 
-LIBS += -lqmqtt
+LIBS += -lQt5Qmqtt
 LIBS += -lwiringPi
 LIBS += -lQtDropbox2
 

@@ -389,6 +389,7 @@ Makefile: iot2.pro /usr/lib/arm-linux-gnueabihf/qt5/mkspecs/linux-g++/qmake.conf
 		/usr/lib/arm-linux-gnueabihf/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/arm-linux-gnueabihf/qt5/mkspecs/features/lex.prf \
 		iot2.pro \
+		/usr/lib/arm-linux-gnueabihf/libQt5Qmqtt.prl \
 		/usr/lib/arm-linux-gnueabihf/libQt5Network.prl \
 		/usr/lib/arm-linux-gnueabihf/libQt5SerialPort.prl \
 		/usr/lib/arm-linux-gnueabihf/libQt5PrintSupport.prl \
@@ -475,6 +476,7 @@ lib/QtTelegramBot/QtTelegramBot.pri:
 /usr/lib/arm-linux-gnueabihf/qt5/mkspecs/features/yacc.prf:
 /usr/lib/arm-linux-gnueabihf/qt5/mkspecs/features/lex.prf:
 iot2.pro:
+/usr/lib/arm-linux-gnueabihf/libQt5Qmqtt.prl:
 /usr/lib/arm-linux-gnueabihf/libQt5Network.prl:
 /usr/lib/arm-linux-gnueabihf/libQt5SerialPort.prl:
 /usr/lib/arm-linux-gnueabihf/libQt5PrintSupport.prl:
